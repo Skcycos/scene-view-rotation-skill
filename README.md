@@ -34,3 +34,36 @@ Typical triggers include:
 
 - `SKILL.md`: The skill definition and operational instructions.
 - `agents/openai.yaml`: UI metadata for the skill.
+- `AGENTS.md`: Repository-level instructions for Codex-style and AGENTS.md-aware coding agents.
+- `CLAUDE.md`: Claude Code project instructions and Claude skill installation notes.
+- `UNIVERSAL_PROMPT.md`: Copy-paste prompt template for agents without a native skill system.
+
+## Installation / Usage
+
+### Codex / OpenAI-style agents
+
+Install or copy this repository into a skills directory, or use `SKILL.md` directly when invoking the skill:
+
+```text
+~/.codex/skills/scene-view-rotation/SKILL.md
+```
+
+### Claude Code / Claude Skills
+
+Install the skill as a Claude skill:
+
+```text
+~/.claude/skills/scene-view-rotation/SKILL.md
+```
+
+For a project-local Claude Code setup, place it under:
+
+```text
+.claude/skills/scene-view-rotation/SKILL.md
+```
+
+Claude Code can also read `CLAUDE.md` at the repository root for project instructions.
+
+### Other agents
+
+For agents that do not support `SKILL.md`, use `UNIVERSAL_PROMPT.md` as the portable prompt template. Attach or upload the reference image, replace `[TARGET_VIEW]`, `[TARGET_VIEW_INSTRUCTION]`, and `[ASPECT_RATIO]`, then run image editing or reference-image generation.
