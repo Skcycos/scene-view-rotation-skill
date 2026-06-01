@@ -1,4 +1,4 @@
 interface:
   display_name: "Scene View Rotation"
-  short_description: "Generate 90/180/270 scene views from an image"
+  short_description: "Generate indoor/outdoor rotated scene views"
   default_prompt: "Use $scene-view-rotation to generate 90, 180, and 270 degree views from my uploaded scene image."
